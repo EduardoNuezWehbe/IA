@@ -1,9 +1,6 @@
 package com.company;
 
-import jdk.internal.util.xml.impl.*;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.Scanner;
 import java.util.Vector;
 
 public class Datos {
@@ -20,6 +17,8 @@ public class Datos {
             direccion.add(new Nodo(vertices));
         }
         construirDirecciones(informacion);
+        busquedaNodo();
+
     }
     public void construirDirecciones (Vector<Integer> informacion) {
         int indiceCostes = 0;
@@ -36,6 +35,14 @@ public class Datos {
             System.out.print("Posicion " + i + " Destinos: ");
             direccion.get(i).write();
         }
+    }
+    public void busquedaNodo () {
+        System.out.print("Introduzca el nodo inicial: ");
+        Scanner sc = new Scanner(System.in);
+        int inicio = sc.nextInt();
+        System.out.print("Introduzca el nodo final: ");
+        int fin = sc.nextInt();
+
     }
 }
 
