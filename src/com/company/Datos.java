@@ -8,6 +8,7 @@ public class Datos {
 
     int vertices;
     Vector<Nodo> direccion;
+    Arbol arbol;
 
     public Datos (Vector<Integer> informacion) {
         vertices = informacion.get(0);
@@ -35,6 +36,7 @@ public class Datos {
             System.out.print("Posicion " + i + " Destinos: ");
             direccion.get(i).write();
         }
+        arbol.write();
     }
     public void busquedaNodo () {
         System.out.print("Introduzca el nodo inicial: ");
@@ -42,7 +44,7 @@ public class Datos {
         int inicio = sc.nextInt();
         System.out.print("Introduzca el nodo final: ");
         int fin = sc.nextInt();
-
+        arbol = new Arbol (inicio,fin);
     }
 }
 
