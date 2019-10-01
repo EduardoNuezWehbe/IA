@@ -86,7 +86,7 @@ public class Main {
         System.out.print("Por favor, introduzca la url del archivo (./variabls.txt: ");
         Scanner sc = new Scanner(System.in);
         String urlArchivo = sc.nextLine();
-        Vector<Integer> informacion = new Vector();
+        Vector<Integer> informacion = new Vector<>();
 
         File archivo = new File(urlArchivo);
         Scanner scanner = new Scanner(archivo);
@@ -99,7 +99,7 @@ public class Main {
             counter++;
         }
        Datos datos = new Datos(informacion);
-
+        datos.write();
     }
 }
 
