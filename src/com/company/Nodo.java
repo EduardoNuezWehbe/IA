@@ -11,12 +11,17 @@ public class Nodo {
         nodoSiguiente = new Vector<> ();
         nodoSiguiente.setSize(size);
     }
-    public void setDatos (int indice, int coste,int size) {
+    public void setDatos (int indice, int coste) {
         nodoSiguiente.set(indice,coste);
     }
     public void write () {
         for(int i = 0; i < nodoSiguiente.size(); ++i) {
-            System.out.print(i + " coste " + nodoSiguiente.get(i) + " | ");
+            if(nodoSiguiente.get(i) == null) {
+                nodoSiguiente.set(i,-1);
+                System.out.print((1+i) + " --> " + nodoSiguiente.get(i) + " | ");
+            }else {
+                System.out.print((1+i) + " --> " + nodoSiguiente.get(i) + " | ");
+            }
         }
         System.out.println();
     }

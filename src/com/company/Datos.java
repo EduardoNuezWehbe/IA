@@ -25,15 +25,15 @@ public class Datos {
         int indiceCostes = 0;
         for(int i = 0; i < vertices; ++i) {
             for(int j = i+1; j < vertices; ++j) {
-                direccion.get(i).nodoSiguiente.set(j,informacion.get(indiceCostes));
-                direccion.get(j).nodoSiguiente.set(i,informacion.get(indiceCostes++));
+                direccion.get(i).setDatos(j,informacion.get(indiceCostes));
+                direccion.get(j).setDatos(i,informacion.get(indiceCostes++));
             }
         }
     }
     public void write () {
         System.out.println("Numero de vertices: " + vertices);
         for(int i = 0; i < vertices; ++i) {
-            System.out.print("Posicion " + i + " Destinos: ");
+            System.out.print("Posicion " + (i+1) + " Destinos: | ");
             direccion.get(i).write();
         }
         arbol.write();

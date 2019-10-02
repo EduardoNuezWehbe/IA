@@ -90,7 +90,6 @@ public class Main {
 
         File archivo = new File(urlArchivo);
         Scanner scanner = new Scanner(archivo);
-
         int counter = 1;
 
         while(scanner.hasNextInt()) {
