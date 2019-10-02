@@ -25,4 +25,13 @@ public class Nodo {
         }
         System.out.println();
     }
+    public Vector<Integer> nodosPosibles () {
+        Vector<Integer> nodosAccesibles = new Vector<> ();
+        for(int i = 0; i < nodoSiguiente.size(); ++i) {
+            if(nodoSiguiente.get(i) != -1) {
+                nodosAccesibles.add(i);
+            }
+        }
+        return nodosAccesibles;
+    }
 }

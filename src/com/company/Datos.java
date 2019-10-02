@@ -39,13 +39,19 @@ public class Datos {
         arbol.write();
     }
     public void busquedaNodo () {
-        System.out.print("Introduzca el nodo inicial: ");
+        /*System.out.print("Introduzca el nodo inicial: ");
         Scanner sc = new Scanner(System.in);
         int inicio = sc.nextInt();
         System.out.print("Introduzca el nodo final: ");
-        int fin = sc.nextInt();
+        int fin = sc.nextInt();*/
+        int inicio = 0;
+        int fin = 4;
         arbol = new Arbol (inicio,fin);
     }
+    public void crearArbol () {
+        arbol.crearArbol(direccion);
+    }
+
 }
 
 

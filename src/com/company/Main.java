@@ -84,21 +84,23 @@ public class Main {
         System.out.println("****************PRACTICA 1 DE IA: ALGORITMOS DE BUSQUEDA********************");
 
         System.out.print("Por favor, introduzca la url del archivo (./variabls.txt: ");
-        Scanner sc = new Scanner(System.in);
-        String urlArchivo = sc.nextLine();
+        //Scanner sc = new Scanner(System.in);
+        //String urlArchivo = sc.nextLine();
         Vector<Integer> informacion = new Vector<>();
 
-        File archivo = new File(urlArchivo);
+        //File archivo = new File(urlArchivo);
+        File archivo = new File("./variabls.txt");
         Scanner scanner = new Scanner(archivo);
         int counter = 1;
-
+        System.out.println();
         while(scanner.hasNextInt()) {
             informacion.add(scanner.nextInt());
             System.out.println(counter + " " + informacion);
             counter++;
         }
        Datos datos = new Datos(informacion);
-        datos.write();
+       datos.write();
+       datos.crearArbol();
     }
 }
 
