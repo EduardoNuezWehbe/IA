@@ -92,12 +92,14 @@ public class Main {
         File archivo = new File("./variabls.txt");
         Scanner scanner = new Scanner(archivo);
         int counter = 1;
+
         System.out.println();
         while(scanner.hasNextInt()) {
             informacion.add(scanner.nextInt());
             System.out.println(counter + " " + informacion);
             counter++;
         }
+
        Datos datos = new Datos(informacion);
        datos.write();
        datos.crearArbol();

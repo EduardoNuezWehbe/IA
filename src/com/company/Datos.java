@@ -18,8 +18,6 @@ public class Datos {
             direccion.add(new Nodo(vertices));
         }
         construirDirecciones(informacion);
-        busquedaNodo();
-
     }
     public void construirDirecciones (Vector<Integer> informacion) {
         int indiceCostes = 0;
@@ -36,9 +34,8 @@ public class Datos {
             System.out.print("Posicion " + (i+1) + " Destinos: | ");
             direccion.get(i).write();
         }
-        arbol.write();
     }
-    public void busquedaNodo () {
+    public void crearArbol () {
         /*System.out.print("Introduzca el nodo inicial: ");
         Scanner sc = new Scanner(System.in);
         int inicio = sc.nextInt();
@@ -47,8 +44,6 @@ public class Datos {
         int inicio = 0;
         int fin = 4;
         arbol = new Arbol (inicio,fin);
-    }
-    public void crearArbol () {
         arbol.crearArbol(direccion);
     }
 
