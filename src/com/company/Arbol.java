@@ -11,4 +11,5 @@ public class Arbol {
     public void write () {
         System.out.print("Nodo inicio: " + nodoInicial + "\nNodo final: " + nodoFinal);
     }
+
 }
