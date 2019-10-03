@@ -3,8 +3,9 @@ package com.company;
 import java.util.Vector;
 
 public class Arbol {
-    int nodoInicial;
-    int nodoFinal;
+
+    private int nodoInicial;
+    private int nodoFinal;
 
     public Arbol(int inicio, int fin) {
         nodoInicial = inicio;
@@ -17,5 +18,20 @@ public class Arbol {
         for(int i = 0; i < nodosAccesibles.size(); ++i) {
             System.out.print(nodosAccesibles.get(i) + " ");
         }
+    }
+    public int getNodoInicial() {
+        return nodoInicial;
+    }
+
+    public int getNodoFinal() {
+        return nodoFinal;
+    }
+
+    public void setNodoInicial(int nodoInicial) {
+        this.nodoInicial = nodoInicial;
+    }
+
+    public void setNodoFinal(int nodoFinal) {
+        this.nodoFinal = nodoFinal;
     }
 }

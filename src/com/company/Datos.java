@@ -5,10 +5,9 @@ import java.util.Vector;
 
 public class Datos {
 
-
-    int vertices;
-    Vector<Nodo> direccion;
-    Arbol arbol;
+    private int vertices;
+    private Vector<Nodo> direccion;
+    private Arbol arbol;
 
     public Datos (Vector<Integer> informacion) {
         vertices = informacion.get(0);
@@ -36,15 +35,33 @@ public class Datos {
         }
     }
     public void crearArbol () {
-        /*System.out.print("Introduzca el nodo inicial: ");
-        Scanner sc = new Scanner(System.in);
-        int inicio = sc.nextInt();
-        System.out.print("Introduzca el nodo final: ");
-        int fin = sc.nextInt();*/
         int inicio = 0;
         int fin = 4;
         arbol = new Arbol (inicio,fin);
         arbol.crearArbol(direccion);
+    }
+    public int getVertices() {
+        return vertices;
+    }
+
+    public void setVertices(int vertices) {
+        this.vertices = vertices;
+    }
+
+    public Vector<Nodo> getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Vector<Nodo> direccion) {
+        this.direccion = direccion;
+    }
+
+    public Arbol getArbol() {
+        return arbol;
+    }
+
+    public void setArbol(Arbol arbol) {
+        this.arbol = arbol;
     }
 
 }

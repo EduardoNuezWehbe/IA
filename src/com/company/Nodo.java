@@ -5,8 +5,8 @@ import java.util.Vector;
 
 public class Nodo {
 
+    private Vector<Integer> nodoSiguiente;
 
-    Vector<Integer> nodoSiguiente;
     public Nodo (int size) {
         nodoSiguiente = new Vector<> ();
         nodoSiguiente.setSize(size);
@@ -33,5 +33,12 @@ public class Nodo {
             }
         }
         return nodosAccesibles;
+    }
+    public Vector<Integer> getNodoSiguiente() {
+        return nodoSiguiente;
+    }
+
+    public void setNodoSiguiente(Vector<Integer> nodoSiguiente) {
+        this.nodoSiguiente = nodoSiguiente;
     }
 }
