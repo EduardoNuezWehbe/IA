@@ -6,6 +6,7 @@ import java.util.Vector;
 public class Nodo {
 
     private Vector<Integer> nodoSiguiente;
+    private Boolean visitado = false;
 
     public Nodo (int size) {
         nodoSiguiente = new Vector<> ();
@@ -40,5 +41,8 @@ public class Nodo {
 
     public void setNodoSiguiente(Vector<Integer> nodoSiguiente) {
         this.nodoSiguiente = nodoSiguiente;
+    }
+    public int getCostesNodo (int indice) {
+        return getNodoSiguiente().get(indice);
     }
 }

@@ -10,9 +10,9 @@ public class Datos {
     private Arbol arbol;
 
     public Datos (Vector<Integer> informacion) {
-        vertices = informacion.get(0);
+        setVertices(informacion.get(0));
         informacion.removeElementAt(0);
-        direccion = new Vector<Nodo>();
+        direccion = new Vector<>();
         for(int i = 0; i < vertices; ++i) {
             direccion.add(new Nodo(vertices));
         }
@@ -21,12 +21,18 @@ public class Datos {
     public void construirDirecciones (Vector<Integer> informacion) {
         int indiceCostes = 0;
         for(int i = 0; i < vertices; ++i) {
-            for(int j = i+1; j < vertices; ++j) {
-                direccion.get(i).setDatos(j,informacion.get(indiceCostes));
-                direccion.get(j).setDatos(i,informacion.get(indiceCostes++));
-            }
+            indiceCostes = getIndiceCostes(informacion, indiceCostes, i);
         }
     }
+
+    private int getIndiceCostes(Vector<Integer> informacion, int indiceCostes, int i) {
+        for(int j = i+1; j < vertices; ++j) {
+            direccion.get(i).setDatos(j,informacion.get(indiceCostes));
+            direccion.get(j).setDatos(i,informacion.get(indiceCostes++));
+        }
+        return indiceCostes;
+    }
+
     public void write () {
         System.out.println("Numero de vertices: " + vertices);
         for(int i = 0; i < vertices; ++i) {
